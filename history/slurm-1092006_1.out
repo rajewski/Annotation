@@ -1,0 +1,5 @@
+/var/spool/slurmd/job1092007/slurm_script: line 13: cd: /rhome/arajewski/bigdata/Nobtusifolia/Annotation/Results: No such file or directory
+mkdir: cannot create directory 'IPROUT': File exists
+17/08/2017 23:44:54:623 Welcome to InterProScan-5.24-63.0
+For the (-i) option you specified a location which doesn't exist or is not readable:
+/rhome/arajewski/bigdata/Nobtusifolia/Annotation/NIOBT_r1.0.aa.1
