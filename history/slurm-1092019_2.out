@@ -1,0 +1,31 @@
+mkdir: cannot create directory 'IPROUT': File exists
+18/08/2017 00:03:53:992 Welcome to InterProScan-5.24-63.0
+18/08/2017 00:04:02:218 Running InterProScan v5 in STANDALONE mode... on Linux
+18/08/2017 00:04:16:590 Loading file /rhome/arajewski/bigdata/Nobtusifolia/Annotation/Results/../../Genome_Files/NIOBT_r1.0.masked.aa.2
+18/08/2017 00:04:16:595 Running the following analyses:
+[CDD-3.14,Coils-2.2.1,Gene3D-4.1.0,MobiDBLite-1.0,Pfam-31.0,PIRSF-3.02,PRINTS-42.0,ProDom-2006.1,ProSitePatterns-20.132,ProSiteProfiles-20.132,SFLD-2,SignalP_EUK-4.1,SMART-7.1,SUPERFAMILY-1.75,TIGRFAM-15.0]
+Available matches will be retrieved from the pre-calculated match lookup service.
+
+Matches for any sequences that are not represented in the lookup service will be calculated locally.
+2017-08-18 00:04:17,462 [amqEmbeddedWorkerJmsContainer-1] [uk.ac.ebi.interpro.scan.business.sequence.BerkeleyPrecalculatedProteinLookup:350] WARN - 
+
+The version of InterProScan you are using is 5.24-63.0
+The version of the lookup service you are using is 5.25-64.0
+As the data in these versions is not the same, you cannot use this match lookup service.
+InterProScan will now run locally
+If you would like to use the match lookup service, you have the following options:
+i) Download the newest version of InterProScan5 from our FTP site by following the instructions on:
+   https://www.ebi.ac.uk/interpro/interproscan.html
+ii) Download the match lookup service for your version of InterProScan from our FTP site and install it locally.
+    You will then need to edit the following property in your configuration file to point to your local installation:
+    precalculated.match.lookup.service.url=
+
+In the meantime, the analysis will continue to run locally.
+
+
+18/08/2017 00:20:13:638 25% completed
+18/08/2017 01:01:17:278 50% completed
+18/08/2017 01:13:14:916 75% completed
+18/08/2017 01:49:11:095 90% completed
+18/08/2017 02:17:18:907 99% completed
+18/08/2017 02:21:25:609 100% done:  InterProScan analyses completed
