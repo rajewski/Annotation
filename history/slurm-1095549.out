@@ -1,0 +1,25 @@
+[92m[03:42:13 PM][0m: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.5
+[92m[03:42:13 PM][0m: Running funannotate v0.6.3
+[92m[03:42:14 PM][0m: No NCBI SBT file given, will use default, however if you plan to submit to NCBI, create one and pass it here '--sbt'
+[92m[03:42:14 PM][0m: 28,212 protein records loaded
+[92m[03:42:14 PM][0m: Running HMMer search of PFAM domains
+[92m[03:42:14 PM][0m: 7,000 annotations added
+[92m[03:42:14 PM][0m: Running Blastp search of UniProt DB
+[92m[03:42:14 PM][0m: 8,607 annotations added
+[92m[03:42:14 PM][0m: Running Blastp search of MEROPS protease DB
+[92m[03:42:14 PM][0m: 874 annotations added
+[92m[03:42:14 PM][0m: Annotating CAZYmes using dbCAN
+[92m[03:42:14 PM][0m: 1,100 annotations added
+[92m[03:42:14 PM][0m: Annotating proteins with EggNog 4.5 database
+[92m[03:42:15 PM][0m: 5,981 annotations added
+[92m[03:42:15 PM][0m: Annotating proteins with BUSCO embryophyta_odb9 models
+[92m[03:42:15 PM][0m: 1,324 annotations added
+[92m[03:42:15 PM][0m: Predicting secreted and transmembrane proteins using Phobius
+[92m[03:42:15 PM][0m: Predicting secreted proteins with SignalP
+[92m[03:42:18 PM][0m: 2,413 secretome and 5,757 transmembane annotations added
+[92m[03:42:18 PM][0m: InterProScan has finished, now pulling out annotations from results
+[92m[03:42:19 PM][0m: Found 0 duplicated annotations, adding 33,056 valid annotations
+[92m[03:42:19 PM][0m: Adding annotations to GFF using GAG
+[92m[03:42:36 PM][0m: Fixing tRNA annotations in GenBank tbl file
+[92m[03:42:38 PM][0m: Converting to final Genbank format, good luck!.....
+slurmstepd-c36: error: *** JOB 1095549 ON c36 CANCELLED AT 2017-08-22T15:58:50 ***
