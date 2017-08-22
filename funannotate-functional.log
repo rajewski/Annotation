@@ -1,0 +1,138 @@
+2017-08-18 11:52:25,976: /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/bin/funannotate-functional.py --gff ../Genome_Files/NIOBT_r1.0.gff --fasta ../Genome_Files/NIOBT_r1.0.fasta --proteins ../Genome_Files/NIOBT_r1.0.masked.aa --species Nobt --email araje002@ucr.edu --out Results/ --busco_db embryophyta_odb9 --eggnog_db chloroNOG --iprscan Annotation/Results/IPROUT/NIOBT_r1.0.aa.xml --cpus 16
+
+2017-08-18 11:52:26,006: OS: linux2, 64 cores, ~ 528 GB RAM. Python: 2.7.5
+2017-08-18 11:52:26,499: Running funannotate v0.6.3
+2017-08-18 11:52:26,685: No NCBI SBT file given, will use default, however if you plan to submit to NCBI, create one and pass it here '--sbt'
+2017-08-18 11:52:26,860: 28,212 protein records loaded
+2017-08-18 11:52:26,860: Running HMMer search of PFAM domains
+2017-08-18 11:52:26,865: hmmsearch --domtblout Results/annotate_misc/pfam.txt --cpu 16 -E 1e-50 /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/Pfam-A.hmm /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa
+2017-08-18 12:25:02,952: (None, '')
+2017-08-18 12:25:09,359: 7,000 annotations added
+2017-08-18 12:25:09,361: Running Blastp search of UniProt DB
+2017-08-18 12:25:09,362: blastp -db /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/uniprot -outfmt 5 -out Results/annotate_misc/uniprot.xml -num_threads 16 -max_target_seqs 1 -evalue 1e-05 -query /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa
+2017-08-18 15:37:56,535: 8,607 annotations added
+2017-08-18 15:37:56,541: Running Blastp search of MEROPS protease DB
+2017-08-18 15:37:56,541: blastp -db /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/MEROPS -outfmt 5 -out Results/annotate_misc/merops.xml -num_threads 16 -max_target_seqs 1 -evalue 1e-05 -query /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa
+2017-08-18 15:41:51,138: 874 annotations added
+2017-08-18 15:41:51,138: Annotating CAZYmes using dbCAN
+2017-08-18 15:41:51,138: hmmscan --domtblout Results/annotate_misc/dbCAN.txt --cpu 16 -E 1e-17 /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/dbCAN.hmm /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa
+2017-08-18 16:17:38,632: (None, '')
+2017-08-18 16:17:39,473: 1,100 annotations added
+2017-08-18 16:17:39,474: Annotating proteins with EggNog 4.5 database
+2017-08-18 16:17:40,742: hmmsearch -o Results/annotate_misc/eggnog.txt --cpu 16 -E 1e-10 /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/chloroNOG_4.5.hmm /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa
+2017-08-18 16:43:06,263: (None, '')
+2017-08-18 16:45:07,083: 5,981 annotations added
+2017-08-18 16:45:07,083: Annotating proteins with BUSCO embryophyta_odb9 models
+2017-08-18 16:45:07,084: /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/funannotate-BUSCO2.py -i /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa -m proteins -l /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/embryophyta_odb9 -o busco -c 16 -f
+2017-08-18 16:52:20,922: 
+INFO	****************** Start a BUSCO 2.0 analysis, current time: 08/18/2017 16:45:07 ******************
+INFO	The lineage dataset is: embryophyta_odb9 (eukaryota)
+INFO	Mode is: proteins
+INFO	To reproduce this run: python /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/funannotate-BUSCO2.py -i /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.masked.aa -o busco -l /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/DB/embryophyta_odb9/ -m proteins -c 16 -sp arabidopsis
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	Temp directory is ./tmp/
+INFO	Running HMMER on the proteins:
+INFO	08/18/2017 16:45:08 =>	0% of predictions performed (1440 to be done)
+INFO	08/18/2017 16:46:33 =>	10% of predictions performed (159/1440 candidate proteins)
+INFO	08/18/2017 16:48:18 =>	20% of predictions performed (303/1440 candidate proteins)
+INFO	08/18/2017 16:49:34 =>	30% of predictions performed (447/1440 candidate proteins)
+INFO	08/18/2017 16:50:34 =>	40% of predictions performed (591/1440 candidate proteins)
+INFO	08/18/2017 16:51:11 =>	50% of predictions performed (736/1440 candidate proteins)
+INFO	08/18/2017 16:51:29 =>	60% of predictions performed (879/1440 candidate proteins)
+INFO	08/18/2017 16:51:41 =>	70% of predictions performed (1023/1440 candidate proteins)
+INFO	08/18/2017 16:51:51 =>	80% of predictions performed (1171/1440 candidate proteins)
+INFO	08/18/2017 16:52:02 =>	90% of predictions performed (1313/1440 candidate proteins)
+INFO	08/18/2017 16:52:15 =>	100% of predictions performed
+INFO	Results:
+INFO	C:84.4%[S:79.7%,D:4.7%],F:3.9%,M:11.7%,n:1440
+INFO	1215 Complete BUSCOs (C)
+INFO	1147 Complete and single-copy BUSCOs (S)
+INFO	68 Complete and duplicated BUSCOs (D)
+INFO	56 Fragmented BUSCOs (F)
+INFO	169 Missing BUSCOs (M)
+INFO	1440 Total BUSCO groups searched
+
+INFO	BUSCO analysis done. Total running time: 433.456698895 seconds
+INFO	Results written in /bigdata/littlab/arajewski/Nobtusifolia/Annotation/Results/annotate_misc/run_busco/
+
+
+2017-08-18 16:52:20,941: 1,324 annotations added
+2017-08-18 16:52:20,941: Predicting secreted and transmembrane proteins using Phobius
+2017-08-18 19:46:47,532: Predicting secreted proteins with SignalP
+2017-08-18 19:46:49,310: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_30.fa
+2017-08-18 19:47:32,075: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_29.fa
+2017-08-18 19:48:13,731: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_12.fa
+2017-08-18 19:48:55,183: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_2.fa
+2017-08-18 19:49:37,208: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_4.fa
+2017-08-18 19:50:19,088: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_11.fa
+2017-08-18 19:51:00,934: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_13.fa
+2017-08-18 19:51:42,167: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_1.fa
+2017-08-18 19:52:24,561: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_20.fa
+2017-08-18 19:53:05,603: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_38.fa
+2017-08-18 19:53:46,726: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_28.fa
+2017-08-18 19:54:28,893: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_17.fa
+2017-08-18 19:55:10,825: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_16.fa
+2017-08-18 19:55:51,242: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_10.fa
+2017-08-18 19:56:32,170: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_36.fa
+2017-08-18 19:57:13,018: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_18.fa
+2017-08-18 19:57:54,729: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_34.fa
+2017-08-18 19:58:35,659: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_31.fa
+2017-08-18 19:59:17,982: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_39.fa
+2017-08-18 19:59:59,175: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_9.fa
+2017-08-18 20:00:40,706: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_40.fa
+2017-08-18 20:01:19,384: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_6.fa
+2017-08-18 20:01:59,574: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_8.fa
+2017-08-18 20:02:39,350: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_5.fa
+2017-08-18 20:03:19,427: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_27.fa
+2017-08-18 20:04:01,597: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_3.fa
+2017-08-18 20:04:42,886: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_25.fa
+2017-08-18 20:05:24,853: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_23.fa
+2017-08-18 20:06:07,194: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_15.fa
+2017-08-18 20:06:48,802: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_37.fa
+2017-08-18 20:07:28,936: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_19.fa
+2017-08-18 20:08:10,155: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_22.fa
+2017-08-18 20:08:51,853: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_7.fa
+2017-08-18 20:09:33,597: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_26.fa
+2017-08-18 20:10:14,498: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_33.fa
+2017-08-18 20:10:57,064: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_14.fa
+2017-08-18 20:11:38,585: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_24.fa
+2017-08-18 20:12:20,772: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_21.fa
+2017-08-18 20:13:02,260: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_35.fa
+2017-08-18 20:13:43,546: signalp -t euk -f short Results/annotate_misc/signalp_tmp/chunk_32.fa
+2017-08-18 20:14:27,309: 2,413 secretome and 5,757 transmembane annotations added
+2017-08-18 20:14:27,312: InterProScan has finished, now pulling out annotations from results
+2017-08-18 20:14:27,313: /usr/bin/python /bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/iprscan2annotations.py Results/annotate_misc/iprscan.xml Results/annotate_misc/annotations.iprscan.txt
+2017-08-18 20:14:27,424: Traceback (most recent call last):
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/funannotate/git-live/util/iprscan2annotations.py", line 28, in <module>
+    with open(sys.argv[1]) as xml_file:
+IOError: [Errno 2] No such file or directory: 'Results/annotate_misc/iprscan.xml'
+
+2017-08-18 20:14:27,805: Found 0 duplicated annotations, adding 33,056 valid annotations
+2017-08-18 20:14:27,805: Adding annotations to GFF using GAG
+2017-08-18 20:14:27,805: gag.py -f /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.fasta -g /bigdata/littlab/arajewski/Nobtusifolia/Genome_Files/NIOBT_r1.0.gff -a /bigdata/littlab/arajewski/Nobtusifolia/Annotation/Results/annotate_misc/all.annotations.txt -o Results/annotate_misc/gag
+2017-08-18 20:14:34,937: no parent
+
+2017-08-18 20:14:34,942: Reading fasta...
+Done.
+Reading gff...
+Traceback (most recent call last):
+  File "/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/gag.py", line 50, in <module>
+    main()
+  File "/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/gag.py", line 46, in main
+    controller.execute(args)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/controller.py", line 74, in execute
+    self.read_gff(gffpath, out_dir)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/controller.py", line 286, in read_gff
+    genes, comments, invalids, ignored = gffreader.read_file(reader)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/gff_reader.py", line 344, in read_file
+    line_added = self.process_line(splitline)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/gff_reader.py", line 241, in process_line
+    self.process_cds_line(line)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/gff_reader.py", line 277, in process_cds_line
+    kwargs = self.extract_cds_args(line)
+  File "/bigdata/bioinfo/pkgadmin/opt/linux/centos/7.x/x86_64/pkgs/GAG/2.0.1/src/gff_reader.py", line 139, in extract_cds_args
+    'strand': line[6], 'phase': int(line[7])}
+ValueError: invalid literal for int() with base 10: '.'
+
+2017-08-18 20:14:34,942: Fixing tRNA annotations in GenBank tbl file
