@@ -20,3 +20,4 @@
 [92m[04:01:14 PM][0m: InterProScan has finished, now pulling out annotations from results
 [92m[04:01:15 PM][0m: Found 0 duplicated annotations, adding 33,056 valid annotations
 [92m[04:01:15 PM][0m: Adding annotations to GFF using GAG
+slurmstepd-c36: error: *** JOB 1095557 ON c36 CANCELLED AT 2017-08-22T16:08:43 ***
