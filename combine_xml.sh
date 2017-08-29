@@ -6,7 +6,7 @@ cat NIOBT_r1.0.masked.aa.2.xml NIOBT_r1.0.masked.aa.3.xml NIOBT_r1.0.masked.aa.4
 grep -v "xml " NIOBT_r1.0.masked.aa.6.xml | grep -v "<protein-matches" > last.xml
 
 #combine everything
-cat first.xml middle.xml last.xml > NIOBT_r1.0.aa.xml 
+cat first.xml middle.xml last.xml > iprscan.xml 
 #cleanup
 rm first.xml middle.xml last.xml
 

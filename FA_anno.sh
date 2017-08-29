@@ -9,10 +9,11 @@
 
 # $((SLURM_MEM_PER_NODE/1000))'G'
 
-cd ~/bigdata/Csativa/
+
+cd ~/bigdata/Nobtusifolia/Annotation
 
 module load funannotate/git-live
 
 AUGUSTUS_CONFIG_PATH=/rhome/arajewski/bigdata/Csativa/augustus/config
 
-funannotate annotate -i FAPredict/predict_results/ -e araje002@ucr.edu  -s "Cannabis sativa" --isolate "Purple kush" --busco_db "embryophyta_odb9" --eggnog_db "chloroNOG" --iprscan FAPredict/predict_results/IPROUT/purple_kush.proteins.fa.xml  --cpus $SLURM_NTASKS --antismash MNPR01000001.1.final.gbk 
+funannotate annotate --gff ../Genome_Files/NIOBT_r1.0.new.gff --fasta ../Genome_Files/NIOBT_r1.0.fasta --proteins ../Genome_Files/NIOBT_r1.0.masked.aa --species "Nobt" --email araje002@ucr.edu --out Results/ --busco_db "embryophyta_odb9" --eggnog_db "chloroNOG" --iprscan Annotation/Results/IPROUT/iprscan.xml  --cpus $SLURM_NTASKS
